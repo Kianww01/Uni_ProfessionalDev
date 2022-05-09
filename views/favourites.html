@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
+    <!-- include the stylesheet file -->
+    <link href="/static/css/favourites.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!-- <ul class='nav-links'>
+        <li><img src="/static/images/logo.png"></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="recommendation">Recommendation</a></li>
+        <li>
+            <a class="active" href="favourites">Favourites</a>
+        </li>
+        <li style="float:right" class='active'><a href="signup">Sign-Up</a></li>
+        <li style="float:right"><a href="login">Login</a></li>
+    </ul> -->
+
+    <ul class="header">
+        <img src="/static/images/logo.png" alt="logo" />
+        <div class="header-right">
+            <a href="/">Home</a>
+            <a href="recommendation">Recommendation</a>
+            <a class='active' href="favourites">Favourites</a>
+            <a href="signup">Sign-Up</a>
+            <a href="login">Login</a>
+        </div>
+    </ul>
+
+    <div class="forms">
+        <div class="titleForm">
+            <h1>1) Enter a Movie Title</h1>
+            <form id='titleForm' action="/favouritesAuth" method="post">
+                <label for='title'>
+                <i class="fas fa-clapperboard"></i>
+            </label>
+                <input type='text' id='title' name='title' placeholder="Title">
+                <input type='submit' value='Find Movie' id='submitTitle'>
+            </form>
+        </div>
+
+        <div class="movieForm">
+            <h1>2) Select Movie from drop down box</h1>
+            <form id='movieForm' action="/addFavourite" method="post">
+                <label for='movie'>
+                    <i class="fas fa-heart"></i>    
+                </label>
+                <select name='movie' id='movie'>
+                    <option value=''>Select Movie:</option>
+                </select>
+                <input type='submit' value='Add to Favourites' id='submitMovie'>
+            </form>
+        </div>
+    </div>
+
+    <script src="/static/favourites.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Recommendation</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- include the stylesheet file -->
+    <link href="/static/css/recommendation.css" rel="stylesheet" type="text/css">
+</head>
+
+<body id='body'>
+
+    <!-- <ul class='nav-links'>
+        <li><img src="/static/images/logo.png"></li>
+        <li><a href="/">Home</a></li>
+        <li><a class='active' href="recommendation">Recommendation</a></li>
+        <li>
+            <a href="favourites">Favourites</a>
+        </li>
+        <li style="float:right" class='active'><a href="signup">Sign-Up</a></li>
+        <li style="float:right"><a href="login">Login</a></li>
+    </ul> -->
+
+    <ul class="header">
+        <img src="/static/images/logo.png" alt="logo" />
+        <div class="header-right">
+            <a href="/">Home</a>
+            <a class='active' href="recommendation">Recommendation</a>
+            <a href="favourites">Favourites</a>
+            <a href="signup">Sign-Up</a>
+            <a href="login">Login</a>
+        </div>
+    </ul>
+
+    <div class="wsid" id="wsid">
+        <h1 id="username">
+            Hello,
+            <%= username %>
+        </h1>
+
+        <h1>(Optional) What mood are you in?</h1>
+        <select name='mood' id='mood'>
+            <option value='0'>I don't care</option>
+            <option value='horror'>I want to be scared</option>
+            <option value='comedy'>I want to laugh</option>
+            <option value='drama'>I'm feeling dramatic</option>
+            <option value='mystery'>I'm feeling mysterious</option>
+            <option value='romance'>I want to fall in love</option>
+            <option value='war'>I want to feel like a soldier</option>
+            <option value='thriller'>I want to be thrilled</option>
+            <option value='action'>I want to see fights, car chases and shootouts</option>
+            <option value='adventure'>I want to go on an adventure</option>
+            <option value='animationFantasy'>I'm bored of the real world</option>
+        </select>
+
+        <h1>Click the button to find out what we recommend you watch next!</h1>
+        <button OnClick="whatShouldIDo()" id="wsidButton">What Should I Do!</button>
+    </div>
+
+    <div id='suggestedMovies'>
+        <div class='suggestedMovie' id='suggestedMovie1'>
+            <div id='suggestedMovie1Data'>
+                <div id='suggestedMovie1Title'></div>
+                <div id='suggestedMovie1Desc'></div>
+            </div>
+        </div>
+        <div class='suggestedMovie' id='suggestedMovie2'>
+            <div id='suggestedMovie2Data'>
+                <div id='suggestedMovie2Title'></div>
+                <div id='suggestedMovie2Desc'></div>
+            </div>
+        </div>
+        <div class='suggestedMovie' id='suggestedMovie3'>
+            <div id='suggestedMovie3Data'>
+                <div id='suggestedMovie3Title'></div>
+                <div id='suggestedMovie3Desc'></div>
+            </div>
+        </div>
+    </div>
+    <script src='/static/recommendation.js'></script>
+</body>
+
+</html>
